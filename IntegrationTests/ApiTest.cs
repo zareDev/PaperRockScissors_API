@@ -35,7 +35,7 @@ namespace IntegrationTests
         [Fact]
         public async Task PlayApi_ShouldReturnExpectedResponse()
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
                 HttpResponseMessage res;
                 string content;
@@ -64,7 +64,7 @@ namespace IntegrationTests
                 }
                 catch (Exception ex)
                 {
-                    //somethimes call to random number api cause timeout error
+                    //somethimes call to random number api cause timeout error. Prevent this exception
                 }
             }
         }
